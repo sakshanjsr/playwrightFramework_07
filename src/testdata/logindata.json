@@ -1,0 +1,7 @@
+{
+    "username" : "student",
+    "passwordList" : {
+        "wrongPassword" : "Password111",
+        "correctPassword" : "Password123"
+    }
+}

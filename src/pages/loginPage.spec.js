@@ -12,6 +12,12 @@ class LoginPage{
     }
 
 
+    // Actions
+    async navigate() {
+        await this.page.goto('https://practicetestautomation.com/practice-test-login/');
+    }
+
+
     async loginSteps(usernameFromLoginParent , passwordFromLoginParent){
         //await this.page.fill(this.username , "student")
         await this.username.fill(usernameFromLoginParent);

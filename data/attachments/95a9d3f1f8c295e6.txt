@@ -1,3 +1,3 @@
-Environment Selected : 
+Environment Selected : qa
 User ID from env file is : QAenvselectedUser
 URL from env file is : https://practicetestautomation.com/practice-test-login/

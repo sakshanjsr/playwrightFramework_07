@@ -1,0 +1,3 @@
+Environment Selected : dev
+User ID from env file is : DEVenvselectedUser
+URL from env file is : https://practicetestautomation.com/practice-test-login/dev

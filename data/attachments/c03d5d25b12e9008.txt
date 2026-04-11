@@ -1,0 +1,3 @@
+Runs once before each tests in each spec file
+student Password123
+Runs once after each tests in each spec file

@@ -1,4 +1,4 @@
-const {test, expect} = require('@playwright/test')
+const { test } = require('../hooks/uiHooks');         //>> Location of Hooks file
 const multipleLoginData = require("../testdata/multipleLoginData.json")
 const LoginPage = require ("../pages/loginPage.spec")
 

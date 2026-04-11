@@ -5,7 +5,7 @@ class LoginPage{
     // this constructor will get the instance of page 
     // and all the locators will be initialized
     constructor(page){
-        this.page = page
+        this.page = page                                 // "this" is used for making the locator as class variable
         this.username = page.locator('#username');
         this.password = page.locator('#password');
         this.submitButton = page.locator('#submit');
@@ -14,7 +14,8 @@ class LoginPage{
 
     // Actions
     async navigate() {
-        await this.page.goto('https://practicetestautomation.com/practice-test-login/');
+        await this.page.goto(process.env.URL);
+        console.log("URL from env file is : " + process.env.URL);
     }
 
 

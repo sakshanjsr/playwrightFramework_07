@@ -5,7 +5,8 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
+require('dotenv').config({ path: `${__dirname}//src//config//.env.${process.env.ENV || 'qa'}` }) ;
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
@@ -37,11 +38,18 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      dependencies: ['Global Setup'],
       use: { ...devices['Desktop Chrome'],
         screenshot:"on",
         trace:"on",
         video:"on"
        },
+    },
+
+     {
+      name: 'Global Setup',
+      testDir: '.',
+      testMatch: /global\.setup\.js/,
     },
 
     // {
@@ -84,8 +92,8 @@ export default defineConfig({
 
 });
 
-  if(!process.env.NODE_ENV){
-    require('dotenv').config({path: `${__dirname}//src//config//.env`}) ;
-  }else{
-    require('dotenv').config({path: `${__dirname}//src//config//.env.${process.env.NODE_ENV}` }) ;
-  }
+  // if(!process.env.NODE_ENV){
+  //   require('dotenv').config({path: `${__dirname}//src//config//.env`}) ;
+  // }else{
+  //   require('dotenv').config({path: `${__dirname}//src//config//.env.${process.env.NODE_ENV}` }) ;
+  // }

@@ -81,3 +81,47 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
+
+      - name: Set Email Status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            echo "EMAIL_STATUS=PASSED" >> $GITHUB_ENV
+          else
+            echo "EMAIL_STATUS=FAILED" >> $GITHUB_ENV
+          fi
+
+      - name: Create Email Body
+        if: always()
+        run: |
+          echo "Hello Team," > email.txt
+          echo "" >> email.txt
+          echo "The Playwright execution has completed." >> email.txt
+          echo "" >> email.txt
+          echo "Environment: ${{ github.event.inputs.env || 'qa' }}" >> email.txt
+          echo "Suite: ${{ github.event.inputs.suite || 'smoke' }}" >> email.txt
+          echo "Build: #${{ github.run_number }}" >> email.txt
+          echo "Status: $EMAIL_STATUS" >> email.txt
+          echo "" >> email.txt
+          echo "Allure Report:" >> email.txt
+          echo "https://<your-pages-url>" >> email.txt
+          echo "" >> email.txt
+          echo "Pipeline:" >> email.txt
+          echo "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> email.txt
+
+      - name: Send Email
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Playwright ${{ github.event.inputs.suite || 'smoke' }} - ${{ env.EMAIL_STATUS }}
+          to: sakshanjsr@gmail.com
+          from: GitHub Actions
+          body: file://email.txt
+
+      
+      

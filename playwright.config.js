@@ -52,10 +52,15 @@ export default defineConfig({
       testMatch: /global\.setup\.js/,
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      dependencies: ['Global Setup'],
+      use: { ...devices['Desktop Firefox'],
+        screenshot:"on",
+        trace:"on",
+        video:"on"
+       },
+    },
 
     // {
     //   name: 'webkit',

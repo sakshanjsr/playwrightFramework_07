@@ -17,6 +17,15 @@ on:
           - dev
           - qa
           - prod
+      suite:
+        description: Select test suite
+        required: true
+        default: smoke
+        type: choice
+        options:
+        - smoke
+        - regression
+        - sanity
 
 permissions:
   contents: write
@@ -40,7 +49,9 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test
+        run: |
+          SUITE=${{ github.event.inputs.suite || 'smoke' }}
+          npx playwright test --grep "@$SUITE"
         env:
           ENV: ${{ github.event.inputs.env || 'qa' }}
 

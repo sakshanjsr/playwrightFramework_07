@@ -46,12 +46,6 @@ export default defineConfig({
        },
     },
 
-     {
-      name: 'Global Setup',
-      testDir: '.',
-      testMatch: /global\.setup\.js/,
-    },
-
     {
       name: 'firefox',
       dependencies: ['Global Setup'],
@@ -62,6 +56,13 @@ export default defineConfig({
        },
     },
 
+     {
+      name: 'Global Setup',
+      testDir: '.',
+      testMatch: /global\.setup\.js/,
+    },
+
+    
     // {
     //   name: 'webkit',
     //   use: { ...devices['Desktop Safari'] },

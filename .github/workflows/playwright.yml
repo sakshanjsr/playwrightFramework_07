@@ -104,7 +104,7 @@ jobs:
           echo "Status: $EMAIL_STATUS" >> email.txt
           echo "" >> email.txt
           echo "Allure Report:" >> email.txt
-          echo "https://<your-pages-url>" >> email.txt
+          echo "https://sakshanjsr.github.io/playwrightFramework_07/" >> email.txt
           echo "" >> email.txt
           echo "Pipeline:" >> email.txt
           echo "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> email.txt

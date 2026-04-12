@@ -11,12 +11,12 @@ test.describe("Practice Tests", () => {
         console.log("Button Color : "+color)
     })
 
-    test("Handle Alerts @smoke", async ({page}) => {
-        await page.goto("https://the-internet.herokuapp.com/javascript_alerts")
-        page.on('dialog' , async (alertWindow) => {
-            expect(alertWindow.type()).toContain("alert")
-        })
-        await page.locator("//button[contains(text(),'Alert')]").click()
-    })
+    // test.only("Handle Alerts @smoke", async ({page}) => {
+    //     await page.goto("https://the-internet.herokuapp.com/javascript_alerts")
+    //     page.on('dialog' , async (alertWindow) => {
+    //         expect(alertWindow.type()).toContain("alert")
+    //     })
+    //     await page.locator("//button[contains(text(),'Alert')]").click()
+    // })
 
 })

@@ -1,4 +1,0 @@
-Executing for row 2
-Data : {"name":"Satish","rollNo":4}
-Name : Satish
-Roll no. : 4

@@ -1,1 +1,1 @@
-[]
+[{"uid":"bb568d8c7d18ede9","name":"Login to Application @smoke @regression","time":{"start":1776310508024,"stop":1776310509109,"duration":1085},"status":"passed","severity":"normal"},{"uid":"7b26c8dc4c7fea82","name":"Get CSS Value @smoke","time":{"start":1776310508017,"stop":1776310516016,"duration":7999},"status":"passed","severity":"normal"},{"uid":"ff6809215cd448ce","name":"Global Setup","time":{"start":1776310507026,"stop":1776310507028,"duration":2},"status":"passed","severity":"normal"}]

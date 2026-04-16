@@ -1,0 +1,12 @@
+Test Title : Get CSS Value @smoke
+Test Tags : @smoke
+Test Status : passed
+Test Retry : 0
+Test Worker Index : 2
+Test Project Name : chromium
+Test Project Metadata : {}
+Test Config : {"configFile":"/app/playwright.config.js","rootDir":"/app/src/tests","forbidOnly":false,"fullyParallel":true,"globalSetup":null,"globalTeardown":null,"globalTimeout":0,"grep":{},"grepInvert":null,"maxFailures":0,"metadata":{"actualWorkers":2},"preserveOutput":"always","projects":[{"grep":{},"grepInvert":null,"outputDir":"/app/test-results","repeatEach":1,"retries":0,"metadata":{},"name":"chromium","testDir":"/app/src/tests","snapshotDir":"/app/src/tests","testIgnore":[],"testMatch":"**/*.@(spec|test).?(c|m)[jt]s?(x)","timeout":30000,"use":{"trace":"on","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36","viewport":{"width":1280,"height":720},"screen":{"width":1920,"height":1080},"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"defaultBrowserType":"chromium","screenshot":"on","video":"on"},"dependencies":["Global Setup"],"__projectId":"chromium"},{"grep":{},"grepInvert":null,"outputDir":"/app/test-results","repeatEach":1,"retries":0,"metadata":{},"name":"Global Setup","testDir":"/app","snapshotDir":"/app","testIgnore":[],"testMatch":{},"timeout":30000,"use":{"trace":"on-first-retry"},"dependencies":[],"__projectId":"Global Setup"}],"quiet":false,"reporter":[["html",null],["/app/node_modules/allure-playwright/dist/cjs/index.js",null]],"reportSlowTests":{"max":5,"threshold":300000},"runAgents":"none","shard":null,"tags":[],"updateSnapshots":"missing","updateSourceMethod":"patch","version":"1.58.2","workers":2,"webServer":null}
+Test File : /app/src/tests/practice.spec.js
+Test Line : 7
+Test Column : 5
+Button Color : rgb(154, 205, 50)

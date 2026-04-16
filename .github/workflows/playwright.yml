@@ -52,6 +52,7 @@ jobs:
           -e ENV=${{ github.event.inputs.env || 'qa' }} \
           -v ${{ github.workspace }}/playwright-report:/app/playwright-report \
           -v ${{ github.workspace }}/test-results:/app/test-results \
+          -v ${{ github.workspace }}/allure-results:/app/allure-results \
           playwright-tests \
           npx playwright test --grep "@$SUITE"
 

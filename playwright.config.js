@@ -46,15 +46,15 @@ export default defineConfig({
        },
     },
 
-    {
-      name: 'firefox',
-      dependencies: ['Global Setup'],
-      use: { ...devices['Desktop Firefox'],
-        screenshot:"on",
-        trace:"on",
-        video:"on"
-       },
-    },
+    // {
+    //   name: 'firefox',
+    //   dependencies: ['Global Setup'],
+    //   use: { ...devices['Desktop Firefox'],
+    //     screenshot:"on",
+    //     trace:"on",
+    //     video:"on"
+    //    },
+    // },
 
      {
       name: 'Global Setup',

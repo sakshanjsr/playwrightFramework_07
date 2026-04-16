@@ -1,4 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","1085","Login to Application @smoke @regression","chromium","2026-04-16","passed","2026-04-16","","loginParent.spec.js","",""
-"","7999","Get CSS Value @smoke","chromium","2026-04-16","passed","2026-04-16","Practice Tests","practice.spec.js","",""
-"","2","Global Setup","Global Setup","2026-04-16","passed","2026-04-16","","../../global.setup.js","",""
+"","1341","Get CSS Value @smoke","chromium","2026-04-16","passed","2026-04-16","Practice Tests","practice.spec.js","",""
+"","3","Global Setup","Global Setup","2026-04-16","passed","2026-04-16","","../../global.setup.js","",""
+"","1568","Login to Application @smoke @regression","chromium","2026-04-16","passed","2026-04-16","","loginParent.spec.js","",""
